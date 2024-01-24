@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add New instructor</title>
+    <link href="/style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <h1>Register instructor</h1>
+    <form action="saveInstructorData" method="post">
+        <label for="instructorName">instructor Name </label>
+        <input id="instructorName" name="instructorName" required type="text">
+        <br>
+
+        <label for="subjectName">subject Name </label>
+        <input id="subjectName" name="subjectName" required type="text">
+        <br>
+
+        <br>
+        <button type="submit">add instructor</button>
+    </form>
+
+    <div class="button-container">
+        <a href="javascript:history.go(-1);">Back</a>
+
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>load balance</title>
+    <link href="/style.css" rel="stylesheet">
+    <style>
+        .list-group-item .font-weight-bold {
+            display: inline-block;
+            width: 200px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #ddd;
+            color: black;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table {
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>load balance data</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Document ID</th>
+            <th>Node name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="AffinityData : ${AffinityData}">
+            <td th:text="${AffinityData.get('docID')}"></td>
+            <td th:text="${AffinityData.get('affinityNode')}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="button-container">
+    <a href="javascript:history.go(-1);">Back</a>
+
+</div>
+
+</body>
+</html>

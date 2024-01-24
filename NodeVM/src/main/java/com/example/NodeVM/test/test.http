@@ -1,0 +1,127 @@
+#bootstrap test  DONE
+GET http://localhost:4000/bootstrap/registerNewUser/hamza77
+###
+GET http://localhost:4000/bootstrap/getAllUsers
+###
+GET http://localhost:4000/bootstrap/removeUser/bbce432b-a8cf-4092-9b25-ada9be343db2
+###
+
+
+#Node test
+
+#creat database DONE
+# curl -H "username: root" -H "token: root123" http://localhost:8081/api/createDB/firstDB
+POST http://localhost:4001/database/createDB/RegistrationSystem
+username: root
+token: root123
+content-type: application/json
+###
+# create collection  DONE
+POST http://localhost:4001/collection/createCollection/RegistrationSystem/students
+username: root
+token: root123
+content-type: application/json
+
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "sectionNumber": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "name",
+    "phone",
+    "address",
+    "sectionNumber"
+  ],
+  "additionalProperties": false
+}
+
+###
+#inserting document DONE
+POST http://localhost:4001/document/addDoc/RegistrationSystem/students
+username: root
+token: root123
+content-type: application/json
+
+{
+  "name": "ali",
+  "phone": "07805655",
+  "address": "amman",
+  "sectionNumber": 3
+}
+###
+#DONE
+GET http://localhost:4002/document/getAllDocuments/RegistrationSystem/students
+username: root
+token: root123
+###
+#DONE
+GET http://localhost:4003/document/getDoc/RegistrationSystem/students/72085187-15ba-4237-aba2-b00362f62214
+username: root
+token: root123
+###
+#Done
+POST http://localhost:4001/document/updateDoc/RegistrationSystem/students/72085187-15ba-4237-aba2-b00362f62214/name/hamza2
+username: root
+token: root123
+###
+#DONE
+DELETE http://localhost:4002/document/deleteDoc/RegistrationSystem/students/3b5b07c6-ec40-43c5-a698-7b8d7a0fa60c
+username: root
+token: root123
+###
+#DONE
+GET http://localhost:4001/collection/showAllCollections/RegistrationSystem
+username: root
+token: root123
+
+###
+#Done
+DELETE http://localhost:4003/collection/deleteCollection/RegistrationSystem/instructors
+username: root
+token: root123
+
+###
+#DONE
+GET http://localhost:4003/database/showAllDatabases
+username: root
+token: root123
+###
+#Done
+DELETE http://localhost:4003/database/deleteDB/RegistrationSystem
+username: root
+token: root123
+###
+#done
+GET http://localhost:4001/document/filterDoc/RegistrationSystem/students/name/hamza
+username: root
+token: root123
+###
+GET http://localhost:4001/document/readingSpecificProperties/RegistrationSystem/students/fd39f282-ce94-4c97-9ebd-ce28802ff48f/address
+username: root
+token: root123
+
+###
+#DONE
+GET http://localhost:4003/affinity/isAffinity
+###
+GET http://localhost:4001/affinity/getAllDocToNodeAffinity
+
+
+
+
+
+
+
+

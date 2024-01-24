@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add New Student</title>
+    <link href="/style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <h1>Register student</h1>
+    <form action="saveStudentData" method="post">
+        <label for="studentName">Student Name </label>
+        <input id="studentName" name="studentName" required type="text">
+        <br>
+
+        <label for="studentPhone">student Phone Number </label>
+        <input id="studentPhone" name="studentPhone" required type="text">
+        <br>
+
+        <label for="studentAddress">student Address </label>
+        <input id="studentAddress" name="studentAddress" required type="text">
+        <br>
+
+        <label for="sectionNumber"> section number</label>
+        <input id="sectionNumber" name="sectionNumber" required type="number" min="1" max="3">
+        <br>
+
+        <br>
+        <button type="submit">add student</button>
+    </form>
+
+    <div class="button-container">
+        <a href="javascript:history.go(-1);">Back</a>
+
+    </div>
+
+</div>
+</body>
+</html>

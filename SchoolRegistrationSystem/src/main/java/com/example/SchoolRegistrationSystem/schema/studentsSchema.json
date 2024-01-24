@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "sectionNumber": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "name",
+    "phone",
+    "address",
+    "sectionNumber"
+  ],
+  "additionalProperties": false
+}
